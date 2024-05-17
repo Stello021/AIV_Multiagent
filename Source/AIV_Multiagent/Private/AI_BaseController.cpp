@@ -21,7 +21,10 @@
 #include "Kismet/KismetMathLibrary.h"
 
 AAI_BaseController::AAI_BaseController(const FObjectInitializer& ObjectInitializer)
-	: Super(ObjectInitializer.SetDefaultSubobjectClass<UCrowdFollowingComponent>(TEXT("PathFollowingComponent"))) {}
+	: Super(ObjectInitializer.SetDefaultSubobjectClass<UCrowdFollowingComponent>(TEXT("PathFollowingComponent"))) 
+{
+	Cast<UCrowdFollowingComponent>(GetPathFollowingComponent())->SetCrowdAvoidanceQuality(ECrowdAvoidanceQuality::High);
+}
 
 void AAI_BaseController::OnPossess(APawn* InPawn)
 {
