@@ -19,8 +19,35 @@ public:
 
 	virtual void InitializeComponent() override;
 
+	void SetupTensionMeterComponent();
+
+	UFUNCTION(BlueprintCallable, Category = "TensionMeter")
+	void UpdateTension();
+
+	UFUNCTION(BlueprintPure, Category = "TensionMeter")
+	int32 GetCurrentTensionValue() const { return CurrentTensionValue; }
+
+	UFUNCTION(BlueprintCallable, Category = "TensionMeter")
+	void UpdateTensionValue(int32 UpdatedTension);
+
+	UFUNCTION(BlueprintPure, Category = "TensionMeter")
+	int32 GetTensionThreshold() const { return TensionThreshold; }
+
+	void StartTensionUpdate();
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
+	AAI_Director* AIDirectorRef;
+
+	int32 CurrentTensionValue;
+	int32 MaxTension;
+	int32 TensionDecay;
+	int32 TensionThreshold;
+	int32 TensionNPCIncrement;
+
+	/* Handle to manage the timer */
+	FTimerHandle UpdateTensionTimerHandle;
+	float UpdateTensionFrequency;
 };

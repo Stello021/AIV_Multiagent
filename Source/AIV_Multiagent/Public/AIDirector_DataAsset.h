@@ -15,7 +15,7 @@ class AIV_MULTIAGENT_API UAIDirector_DataAsset : public UDataAsset
 	GENERATED_BODY()
 	
 public:
-	
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI Director")
 	float UpdateDirectorFrequency = 30.f;
 
@@ -39,5 +39,5 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tension Meter", meta = (ClampMin = "0", ClampMax = "100", UIMin = "0", UIMax = "100"))
 	int32 TensionDecay = 1;
-
+	
 };

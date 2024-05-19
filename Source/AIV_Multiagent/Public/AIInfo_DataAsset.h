@@ -14,16 +14,17 @@ class AIV_MULTIAGENT_API UAIInfo_DataAsset : public UDataAsset
 {
 	GENERATED_BODY()
 	
+
 public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	float WalkSpeed = 200.f;
+	float WalkSpeed = 230.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	float RunSpeed = 450.f;
+	float RunSpeed = 500.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	float RotationSpeed = 3.f;
+	float RotationSpeed = 2.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Awareness|Setup")
 	float MaxAwareness = 100.f;
@@ -53,7 +54,7 @@ public:
 	float AwarenessIncreaseOnSight_Backward = 2.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Awareness|Hearing")
-	float AwarenessIncreaseOnFootsteps = 20.f;
+	float AwarenessIncreaseOnFootsteps = 5.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Awareness|Hearing")
 	float AwarenessIncreaseOnWhistle = 100.f;
@@ -86,7 +87,7 @@ public:
 	float AlertFrequencyUpdateOnSight = 0.5f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception|Sight")
-	float SightRadius = 700.f;
+	float SightRadius = 500.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception|Sight")
 	float LoseSightRadius = 700.f;
@@ -98,22 +99,22 @@ public:
 	float LoseSightTimer = 1.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception|Sight")
-	float SightPeripheralHalfAngleDegree_Narrow = 20.f;
+	float SightPeripheralHalfAngleDegree_Narrow = 10.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception|Sight")
-	float SightRadius_Wide = 700.f;
+	float SightRadius_Wide = 1000.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception|Sight")
-	float SightPeripheralHalfAngleDegree_Wide = 55.f;
+	float SightPeripheralHalfAngleDegree_Wide = 45.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception|Sight")
-	float SightRadius_Peripheral = 250.f;
+	float SightRadius_Peripheral = 500.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception|Sight")
-	float SightPeripheralHalfAngleDegree_Peripheral = 90.f;
+	float SightPeripheralHalfAngleDegree_Peripheral = 60.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception|Sight")
-	float SightRadius_Backward = 150.f;
+	float SightRadius_Backward = 200.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception|Hearing")
 	float RunHearingRange = 750.f;
@@ -129,5 +130,4 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BT|Hunting")
 	float HuntingTime = 20.f;
-
 };
